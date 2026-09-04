@@ -1,0 +1,10 @@
+# 依赖与构建产物不纳入版本管理
+node_modules
+dist
+dist-ssr
+
+# 本地文件与编辑器配置
+*.local
+.DS_Store
+.vscode/*
+!.vscode/extensions.json
