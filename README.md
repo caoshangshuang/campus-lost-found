@@ -34,6 +34,27 @@ npm run build     # 构建产物输出到 dist/
 npm run preview   # 本地预览构建结果
 ```
 
+## 双机协作备忘
+
+实践周会在两台电脑之间交替开发，代码经 Gitee 同步。换电脑前后各执行一次：
+
+```bash
+# 离开当前电脑前
+git add -A && git commit -m "wip: 今日进度" && git push
+```
+
+```bash
+# 到另一台电脑后，动手前
+git pull
+```
+
+注意事项：
+
+- 新建的文件必须先 `git add` 才会同步，untracked 文件不会跟着 git 走；
+- `node_modules` 与 `dist` 已通过 .gitignore 排除，新机器首次需 `npm install`；
+- 仓库外的文档（任务登记表、各类报告）不在 git 管理中，需手动同步；
+- 应用数据保存在浏览器 localStorage 中，两台电脑的本地数据不一致属正常现象。
+
 ## 目录结构
 
 ```
