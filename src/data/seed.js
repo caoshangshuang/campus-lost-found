@@ -2,6 +2,8 @@
 // 关键设计：所有时间都用"相对今天"计算（daysAgo 天前），而不是写死日期——
 // 否则过几天后"近 7 日发布趋势"图表会因为没有当天数据而全是 0
 
+import { toLocalInputValue } from '../utils/format'
+
 // 演示账号：两个账号用于展示"我的发布"会随登录人不同而变化
 export const USERS = [
   { id: '2023001', name: '张三', password: '123456' },
@@ -15,16 +17,6 @@ function day(daysAgo, hour) {
   d.setDate(d.getDate() - daysAgo)
   d.setHours(hour, 20, 0, 0)
   return d
-}
-
-// 时间戳 -> 'YYYY-MM-DDTHH:mm' 字符串
-// 这是 <input type="datetime-local"> 要求的格式，物品的 time 字段必须用这个格式存
-function toInputValue(date) {
-  const p = (n) => String(n).padStart(2, '0')
-  return (
-    date.getFullYear() + '-' + p(date.getMonth() + 1) + '-' + p(date.getDate()) +
-    'T' + p(date.getHours()) + ':' + p(date.getMinutes())
-  )
 }
 
 // 16 条种子数据的规格表，每条一行：
@@ -60,7 +52,7 @@ export function buildSeedItems() {
       title: row.title,
       category: row.category,
       location: row.location,
-      time: toInputValue(new Date(createdAt)), // 丢失/拾获时间（与发布时间一致，演示用）
+      time: toLocalInputValue(createdAt), // 丢失/拾获时间（与发布时间一致，演示用）
       description: row.description,
       contact: row.contact, // 存原始值，展示时才脱敏
       status: row.status,
