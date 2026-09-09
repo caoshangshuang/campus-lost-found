@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHashHistory } from 'vue-router'
 import { isLoggedIn } from '../store'
 
 // 路由表：路径 -> 页面组件（懒加载，构建时按页分包，减小首屏体积）
@@ -14,8 +14,12 @@ const routes = [
 ]
 
 const router = createRouter({
-  // history 模式：URL 无 # 号；部署时需配置 SPA 回退到 index.html
-  history: createWebHistory(),
+  // hash 模式：URL 形如 /#/items。
+  // 选型原因：Gitee Pages 等静态托管平台不支持 history 路由所需的服务器端重写，
+  // 刷新 /items 会直接 404；hash 模式下路由信息在 # 之后，浏览器不会向服务器
+  // 请求该路径，刷新与直达链接都正常。若将来部署到支持重写规则的平台
+  // （如 Vercel/Netlify），可改回 createWebHistory。
+  history: createWebHashHistory(),
   routes,
 })
 
