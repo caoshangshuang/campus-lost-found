@@ -1,0 +1,1 @@
+import{c as o,a as t,o as s}from"./index-spEtiq2m.js";const r={__name:"MyPostsView",setup(n){return(a,e)=>(s(),o("section",null,[...e[0]||(e[0]=[t("h1",null,"我的发布",-1),t("p",null,"待开发：本人发布列表、状态流转管理（待认领→认领中→已完结）。",-1)])]))}};export{r as default};

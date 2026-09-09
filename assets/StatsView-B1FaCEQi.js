@@ -1,0 +1,1 @@
+import{c as a,a as t,o as n}from"./index-spEtiq2m.js";const r={__name:"StatsView",setup(o){return(s,e)=>(n(),a("section",null,[...e[0]||(e[0]=[t("h1",null,"数据统计",-1),t("p",null,"待开发：分类占比、近 7 日发布趋势图表。",-1)])]))}};export{r as default};

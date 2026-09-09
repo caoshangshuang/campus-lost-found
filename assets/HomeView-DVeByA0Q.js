@@ -1,0 +1,1 @@
+import{c as n,a as e,o}from"./index-spEtiq2m.js";const s={__name:"HomeView",setup(t){return(a,l)=>(o(),n("section",null,[...l[0]||(l[0]=[e("h1",null,"校园失物招领平台",-1),e("p",null,"丢失物品、捡到物品，来这里发布和认领。",-1),e("p",null,"骨架页面：第 1 天搭脚手架，第 3 天完成页面开发。",-1)])]))}};export{s as default};
