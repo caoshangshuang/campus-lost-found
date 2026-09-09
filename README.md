@@ -50,6 +50,7 @@ git pull
 
 注意事项：
 
+- 学习/开发进度记录在仓库根目录的《学习进度.md》，换电脑后打开它即可接着学，完成一项就勾选并随代码提交；
 - 新建的文件必须先 `git add` 才会同步，untracked 文件不会跟着 git 走；
 - `node_modules` 与 `dist` 已通过 .gitignore 排除，新机器首次需 `npm install`；
 - 仓库外的文档（任务登记表、各类报告）不在 git 管理中，需手动同步；
@@ -57,7 +58,7 @@ git pull
 
 ## 目录结构
 
-```
+```text
 src/
 ├── main.js          # 应用入口
 ├── App.vue          # 根组件（导航栏 + 路由视图）
