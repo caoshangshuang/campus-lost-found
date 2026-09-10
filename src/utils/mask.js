@@ -6,7 +6,7 @@ export function isPhone(v) {
   return /^1[3-9]\d{9}$/.test(String(v).trim())
 }
 
-// 脱敏展示：reveal=true 时原样返回（发布者本人看详情时用）
+// 脱敏展示：reveal=true 时原样返回（登录用户看详情时用；游客只能看到脱敏版本）
 // 手机号：13812345678 -> 138****5678（保留前 3 后 4）
 // 其他（QQ/微信等）：保留前 2 后 2，如 'QQ 1234567890' -> 'QQ****90'；太短的只留首字符
 export function maskContact(value, reveal = false) {
