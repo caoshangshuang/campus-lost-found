@@ -1,1 +1,0 @@
-import{_ as e,o as r,c as n,t as c,j as s,S as t,n as o}from"./index-fSim8BKT.js";const u={__name:"StatusBadge",props:{status:{type:String,required:!0}},setup(a){return(l,_)=>(r(),n("span",{class:o(["badge",s(t)[a.status].badgeClass])},c(s(t)[a.status].label),3))}},S=e(u,[["__scopeId","data-v-18b2b869"]]);export{S};
