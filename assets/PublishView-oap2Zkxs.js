@@ -1,1 +1,0 @@
-import{c as l,a as t,o as n}from"./index-spEtiq2m.js";const r={__name:"PublishView",setup(o){return(s,e)=>(n(),l("section",null,[...e[0]||(e[0]=[t("h1",null,"发布信息",-1),t("p",null,"待开发：发布/编辑表单、表单校验。",-1)])]))}};export{r as default};

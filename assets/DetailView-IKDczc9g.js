@@ -1,1 +1,0 @@
-import{c as a,a as t,o as l}from"./index-spEtiq2m.js";const s={__name:"DetailView",setup(n){return(o,e)=>(l(),a("section",null,[...e[0]||(e[0]=[t("h1",null,"物品详情",-1),t("p",null,"待开发：物品详情、联系方式脱敏展示、认领操作。",-1)])]))}};export{s as default};
